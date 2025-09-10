@@ -11,13 +11,9 @@ const app = express();
 
 connectDB();
 
-app.use(cors()); 
+//app.use(cors()); //previous
 
-// //updated
-// app.use(cors({
-//   origin: "https://sol9x-mern-app.vercel.app", // your frontend URL
-//   credentials: true,
-// }));
+app.use(cors({ origin: "*" }));
 
 
 app.use(express.json());
