@@ -11,14 +11,13 @@ const app = express();
 
 connectDB();
 
-// app.use(cors()); --peevious
+app.use(cors()); 
 
-//updated
-
-app.use(cors({
-  origin: "https://sol9x-mern-app.vercel.app", // your frontend URL
-  credentials: true,
-}));
+// //updated
+// app.use(cors({
+//   origin: "https://sol9x-mern-app.vercel.app", // your frontend URL
+//   credentials: true,
+// }));
 
 
 app.use(express.json());

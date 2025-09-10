@@ -17,7 +17,7 @@ const generateToken = (user) => {
 // @desc    Signup
 // @route   POST /api/auth/signup
 export const signup = async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password, role,course } = req.body;
 
   try {
     const exists = await User.findOne({ email });
