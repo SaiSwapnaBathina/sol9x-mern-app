@@ -43,7 +43,7 @@ app.use('/api/students', studentRoutes); // 👈 Make sure this is here
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send({ error: err.message });
+    res.status(500).send({ error: err.message });//fixed the rote checking 404 error while checking in postmon
   });
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
